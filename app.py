@@ -7,8 +7,8 @@ from wtforms import Form, BooleanField, TextField, PasswordField, validators
 app = Flask(__name__)
 
 class LenderForm(Form):
-    amount = TextField('amount', [validators.Length(min=4, max=25)])
-    rate = TextField('rate', [validators.Length(min=6, max=35)])
+    amount = TextField('loanVal', [validators.Length(min=4, max=25)])
+    rate = TextField('IRrange', [validators.Length(min=6, max=35)])
 
 
 # use decorators to link the function to a url
@@ -27,8 +27,9 @@ def lend():
 @app.route('/lend', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
-        text = request.form['amount']
-        return render_template("lenderSearch.html", text = text)
+        amount = request.form['amount']
+        # rate = request.form['IRrange']
+        return render_template("lenderSearch.html", amount = amount)
 
 
 
