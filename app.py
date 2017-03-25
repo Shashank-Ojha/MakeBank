@@ -27,9 +27,9 @@ def lend():
 @app.route('/lend', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
-        amount = request.form['amount']
-        # rate = request.form['IRrange']
-        return render_template("lenderSearch.html", amount = amount)
+        amount = request.form['loanVal']
+        rate = request.form['IRrange']
+        return render_template("lenderSearch.html", amount = amount, rate = rate)
 
 
 
