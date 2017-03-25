@@ -18,11 +18,18 @@ def get_purchase_amounts():
     account_url="http://api.reimaginebanking.com/accounts?key=dcd6272d8dab8b826b5c1376ac90af1b"
     all_accounts=requests.get(account_url)
     all_accounts=json.loads(all_accounts.text)
+    acc=[] #list of lists. [[clothes], [groceries], [personal]]
     for account in all_accounts:
         account_id=account["_id"]
         #do something with this
         l=get_purchase_by_account(account_id)
-        print(sorted(l)) #do something with this l
+        clothes=l[0:12]
+        groceries=l[12:-5]
+        personal=l[-5:]
+        acc.append(clothes)
+        acc.append(groceries)
+        acc.append(personal)
+        print(acc) #do something with this acc
     return l
 
 (get_purchase_amounts())
