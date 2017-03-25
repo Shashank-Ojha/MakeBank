@@ -71,53 +71,44 @@ h1{
     <header id="top" class="header">
         <div class="text-vertical-center">
           <div class="container">
-<<<<<<< Updated upstream
-           
-=======
+
             <div class="row" style="vertical-align:text-top;">
                 <h1 style="font-size:400%;">What type of borrower are you looking for?</h1>
                 <br>
                 <br>
             </div>
+            <form action="/lend" method="POST">
             <div class = "row">
                 <div class = "col-sm-1">
                 </div>
                 <div class = "col-sm-4">
-                    <form>
                       <div class="form-group">
                         <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
-                        <input type="text" class="form-control" id="usr" name="loanVal">
+                        <input type="text" class="form-control" id="usr" name="loanVal" placeholder="$">
+
                       </div>
-                      <!-- <div class = "form-group">
-                      </div> -->
-                    </form>
                 </div>
                 <div class = "col-sm-2">
                 </div>
                 <div class = "col-sm-4">
-                    <form>
                       <div class="form-group">
                         <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
                         <label style = "font:100%"><input type="radio" class="form-inline" name="IRrange"> 0% - 1%</label><br>
-                        <label><input type="radio" class="form-inline" name="IRrange"> 1% - 2%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange"> 2% - 3%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange"> >3%</label>
+                        <label><input type="radio" class="form-inline" name="IRrange" value="1-2%"> 1% - 2%</label> <br>
+                        <label><input type="radio" class="form-inline" name="IRrange" value="2-3%"> 2% - 3%</label> <br>
+                        <label><input type="radio" class="form-inline" name="IRrange" value=">2%"> >3%</label>
                       </div>
-                    </form>
                 </div>
                 <div class = "col-sm-1">
                 </div>
             </div>
+            <br>
+            <br>
             <div class = "row">
-                <div class = "col-sm-3">
-                <label for="usr" style="font-size:200%;"><i>Other Preferences:</i></label>
+                <div class = "col-sm-1">
                 </div>
-                <div class = "col-sm-9">
-                <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
-                <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
-                </div>
-            </div>
+            <input type="submit" name="my-form" value="Find Borrowers">
+          </form>
             <div class = "row">
             <br>
             <br>
@@ -126,7 +117,6 @@ h1{
             <br>
             <br>
             </div>
->>>>>>> Stashed changes
           </div>
         </div>
     </header>
