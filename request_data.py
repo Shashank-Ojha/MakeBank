@@ -1,9 +1,9 @@
 import requests
 import json
-
+#customer_url only has api key, no customer id
 
 #create a new customer
-url="http://api.reimaginebanking.com/customers?key=3f5b7bf5eab502003796c17aa8e134e4"
+customer_url="http://api.reimaginebanking.com/customers?key=3f5b7bf5eab502003796c17aa8e134e4"
 new_customer= {
   "first_name": "teg",
   "last_name": "singh",
@@ -12,22 +12,29 @@ new_customer= {
     "street_name": "Ashley Court",
     "city": "Oak Brook",
     "state": "IL",
-    "zip": "60523"
+    "money": "60523"
   }
 }
 #submit post request
-response = requests.post( 
-    url, 
-    data=json.dumps(new_customer),
-    headers={'content-type':'application/json'},
-    )
+# response = requests.post( 
+#     customer_url, 
+#     data=json.dumps(new_customer),
+#     headers={'content-type':'application/json'},
+#     )
 
-customers=requests.get(url)
+customers=requests.get(customer_url)
 customers_data=json.loads(customers.text)
+print(customers_data)
 for customer in customers_data:
-    print(customer)
-    break
-
+    ID=customer["_id"]
+    print(ID)
+    delete_url="http://api.reimaginebanking.com/accounts/{}?key=3f5b7bf5eab502003796c17aa8e134e4".format(ID)
+    r=requests.delete(
+        delete_url,
+        data=json.dumps(customer),
+        headers={'content-type':'application/json'},
+    )    
+    print(r.status_code)
 # if response.status_code == 201:
 #     print('new customer created')
 # print (response)
