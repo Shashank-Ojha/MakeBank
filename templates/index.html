@@ -27,6 +27,13 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+        h1
+        {
+            margin: 35px;
+        }
+
+    </style>
 
 </head>
 
@@ -38,7 +45,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Hello User</a>
+                <a href="#top" onclick=$("#menu-close").click();>Hello Sasha!</a>
             </li>
             <li>
                 <a href="#top" onclick=$("#menu-close").click();>Profile</a>
@@ -53,10 +60,16 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>MakeBank</h1>
-            <h3>Do you want to</h3>
+            <h3>What would you like to do today?</h3>
             <br>
-            <a href="/borrow" class="btn btn-dark btn-lg">Lend</a>
-            <a href="/lend" class="btn btn-dark btn-lg">Borrow</a>
+            <table width=200 border="0" align="center" cellpadding="10" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td><a href="/borrow" class="btn btn-dark btn-lg">Lend</a></td>
+                        <td><a href="/lend" class="btn btn-dark btn-lg">Borrow</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </header>
 
