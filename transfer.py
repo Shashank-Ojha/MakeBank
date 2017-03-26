@@ -50,7 +50,7 @@ payer_account=requests.get(account_url)
 payer_account=json.loads(payer_account.text)[0]
 payer_account_id=payer_account["_id"]
 
-def transferMoney(borrower): #get borrower as an object of is_borrower
+def transferMoney(borrower, lender_lend_amount, lender_lend_interest_rate): #get borrower as an object of is_borrower
     # payee_customer_id=borrower.customer["_id"]
     # account_url="http://api.reimaginebanking.com/customers/{}/accounts?key=dcd6272d8dab8b826b5c1376ac90af1b".format(payee_customer_id)
     # payee_account=requests.get(account_url)
