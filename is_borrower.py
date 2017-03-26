@@ -20,7 +20,7 @@ class Borrower(object):
         self.customer=customer  #capital one dictionary for get customers
         if name=="Sasha":
             self.credit_score=224
-        if name=="Teg":
+        if name=="Elle":
             self.credit_score=160
         if name=="Rihanna":
             self.credit_score=289
