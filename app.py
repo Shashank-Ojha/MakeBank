@@ -53,6 +53,10 @@ def chooseBorrow():
 def borrow():
     return render_template('borrow.html')
 
+@app.route('/borrowPosted')
+def borrowPosted():
+    return render_template('borrowPosted.html')
+
 @app.route('/borrow', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
