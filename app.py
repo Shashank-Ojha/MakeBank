@@ -1,6 +1,7 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template, request
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
+#import pythonfiles(no .py)
 
 
 # create the application object
@@ -25,10 +26,25 @@ def lend():
     return render_template('lend.html')
 
 @app.route('/lend', methods = ['POST'])
+def chooseBorrow():
+   if request.method == 'POST':
+        amount = request.form['loanVal']
+        rate = request.form['IRrange']
+        #filename.main(amount, rate)
+        #this will give search results
+        return render_template("lenderSearch.html", amount = amount, rate = rate)
+
+@app.route('/borrow')
+def borrow():
+    return render_template('borrow.html')
+
+@app.route('/borrow', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
         amount = request.form['loanVal']
         rate = request.form['IRrange']
+        #filename.main(amount, rate)
+        #this will give search results
         return render_template("lenderSearch.html", amount = amount, rate = rate)
 
 @app.route('/borrow')
