@@ -57,4 +57,4 @@ def getScore():
         std = 400-(sumOfSquares/len(w))**0.5
         stds.append(int(std))
     return stds
-
+print(getScore())
