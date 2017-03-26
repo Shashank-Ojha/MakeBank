@@ -23,7 +23,7 @@ def sort_borrowers(lender_amount, borrowers):
             interest_rate_score=50
         if lender_amount==3.5 and not(3<=borrower.borrower_interest_rate):
             interest_rate_score=50
-        diff=abs(borrower.borrow_amount-lender_amount)+(400-borrower.credit_score)*.4+interest_rate_score
+        diff=abs(borrower.borrow_amount-lender_amount)*.3+(400-borrower.credit_score)*.8+interest_rate_score
         borrowers_and_match_score[diff]=borrower
     #sort backwards becuase you want lower difference
     match_scores_sorted=sorted(borrowers_and_match_score.keys())
