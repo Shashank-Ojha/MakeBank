@@ -1,5 +1,6 @@
 import requests
 import json
+from is_borrower import *
 
 
 #payer is the lender, aka lender lenny
@@ -14,3 +15,6 @@ account_url="http://api.reimaginebanking.com/customers/{}/accounts?key=dcd6272d8
 payer_account=requests.get(account_url)
 payer_account=json.loads(payer_account.text)
 payer_account=payer_accound["_id"]
+
+def transfer(borrower): #get borrower as an object of is_borrower
+    
