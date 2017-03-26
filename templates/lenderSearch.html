@@ -99,7 +99,7 @@
                 <br>
                 <br>
             </div>
-        
+
       <!-- Left Card -->
           <div class="row">
             <div class = "col-sm-4 thinner">
@@ -108,21 +108,20 @@
                     <img class="activator" src="static/img/riya.png">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Riyanna Uttappam<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+                    <span class="card-title activator grey-text text-darken-4">{{ name1 }}<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
 
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
                     <br>
-                    <ul><span class="card-title grey-text text-darken-4">Riyanna Uttappam</span></ul>
+                    <ul><span class="card-title grey-text text-darken-4">{{ name1 }}</span></ul>
                     <br>
 
-
-                    <p class="gpa">GPA: 4.37</p>
-                    <p class="info">Notable Courses:</p>
                     <ul>
-                    <li>AP Computer Science(5)</li>
+                    <li>Desired Amount: {{ amount1 }}</li>
+                    <li>Desired Rate: {{ rate1 }}</li>
+                    <li>Credit Score: {{ credit1 }}</li>
                     </ul>
                   </div>
                 </div>
@@ -135,19 +134,19 @@
                     <img class="activator" src="static/img/teg.jpg">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">El Teg Singh<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+                    <span class="card-title activator grey-text text-darken-4">{{ name2 }}<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
 
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
                     <br>
-                    <span class="card-title grey-text text-darken-4">El Teg Singh</span>
+                    <span class="card-title grey-text text-darken-4">{{ name2 }}</span>
                     <br>
-                    <p class="gpa">GPA: 4.37</p>
-                    <p class="info">Notable Courses:</p>
                     <ul>
-                    <li>AP Computer Science(5)</li>
+                    <li>Desired Amount: {{ amount2 }}</li>
+                    <li>Desired Rate: {{ rate2 }}</li>
+                    <li>Credit Score: {{ credit2 }}</li>
                     </ul>
                   </div>
                 </div>
@@ -160,20 +159,20 @@
                     <img class="activator" src="static/img/sasha.jpg">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Sasha Kerela<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+                    <span class="card-title activator grey-text text-darken-4">{{ name3 }}<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
 
                   </div>
                   <div class="card-reveal">
                     <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
                     <br>
-                    <span class="card-title grey-text text-darken-4">Sasha Kerela</span>
+                    <span class="card-title grey-text text-darken-4">{{ name2 }}</span>
                     <br>
-                    
-                    <p class="gpa">GPA: 4.37</p>
-                    <p class="info">Notable Courses:</p>
+
                     <ul>
-                    <li>AP Computer Science(5)</li>
+                    <li>Desired Amount: {{ amount3 }}</li>
+                    <li>Desired Rate: {{ rate3 }}</li>
+                    <li>Credit Score: {{ credit3 }}</li>
                     </ul>
                   </div>
                 </div>
@@ -181,12 +180,24 @@
 
 
           </div>
-          <!-- <form method=post action="{{url_for('chooseLender')}}">
+          <form method=post action="{{url_for('chooseLender')}}">
             <dl>
-              {{ amount }}
-              {{ rate }}
+              {{ name1 }}
+              {{ amount1 }}
+              {{ rate1 }}
+              {{ credit1 }}
+              <br>
+              {{ name2 }}
+              {{ amount2 }}
+              {{ rate2 }}
+              {{ credit2 }}
+              <br>
+              {{ name3 }}
+              {{ amount3 }}
+              {{ rate3 }}
+              {{ credit3 }}
             </dl>
-          </form> -->
+          </form>
 
 
 

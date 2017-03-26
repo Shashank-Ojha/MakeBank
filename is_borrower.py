@@ -18,12 +18,12 @@ class Borrower(object):
         if name=="Rihanna":
             self.credit_score=112.15
         if name=="Adam":
-            self.credit_score=get_score()[0]
+            self.credit_score=getScore()[0]
         if name=="Billy":
-            self.credit_score=get_score()[1]
+            self.credit_score=getScore()[1]
         if name=="Carlisle":
-            self.credit_score=get_score()[2]
-            
+            self.credit_score=getScore()[2]
+
 #hardcoded for now to make a borrower named adam, who is already stored in captial 1 database
 def make_borrower(borrow_amount, borrow_interest_rate, name):
     customers_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
@@ -59,9 +59,3 @@ def main():
     Teg=make_borrower(teg_borrow_amount, teg_interest_rate, "Teg")
     borrowers=[Adam, Billy, Carlisle, Sasha, Rihanna, Teg] #all of type Borrowes
     return borrowers
-
-
-
-
-
-

@@ -1,7 +1,7 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template, request
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
-#import pythonfiles(no .py)
+import search
 
 
 # create the application object
@@ -28,11 +28,26 @@ def lend():
 @app.route('/lend', methods = ['POST'])
 def chooseBorrow():
    if request.method == 'POST':
-        amount = request.form['loanVal']
-        rate = request.form['IRrange']
-        #filename.main(amount, rate)
-        #this will give search results
-        return render_template("lenderSearch.html", amount = amount, rate = rate)
+        amount = int(request.form['loanVal'])
+        rate = float(request.form['IRrange'])
+        database = search.get_borrowers(amount, rate)
+        #this will give you a list of burrowers
+        return render_template("lenderSearch.html",
+                                name1 = database[0].name,
+                                amount1 = database[0].borrow_amount,
+                                rate1 = database[0].borrow_interest_rate,
+                                credit1 = round(database[0].credit_score,2),
+
+                                name2 = database[1].name,
+                                amount2 = database[1].borrow_amount,
+                                rate2 = database[1].borrow_interest_rate,
+                                credit2 = round(database[1].credit_score,2),
+
+                                name3 = database[2].name,
+                                amount3 = database[2].borrow_amount,
+                                rate3 = database[2].borrow_interest_rate,
+                                credit3 = round(database[2].credit_score,2)
+                                )
 
 @app.route('/borrow')
 def borrow():
@@ -44,7 +59,6 @@ def chooseLender():
         amount = request.form['loanVal']
         rate = request.form['IRrange']
         #filename.main(amount, rate)
-        #this will give search results
         return render_template("lenderSearch.html", amount = amount, rate = rate)
 
 
