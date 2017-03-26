@@ -8,7 +8,7 @@ client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
 def send_message(message_body, phone):
     message = client.messages.create(
-        body=body,  # Message body, if any
+        body=body+"You can reach me at 630-908-0289",  # Message body, if any
         to=phone,
         from_="+16307565499",
     )
