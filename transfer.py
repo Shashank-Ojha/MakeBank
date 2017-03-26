@@ -13,11 +13,7 @@ for customer in customers:
 
 account_url="http://api.reimaginebanking.com/customers/{}/accounts?key=dcd6272d8dab8b826b5c1376ac90af1b".format(payer_id)
 payer_account=requests.get(account_url)
-<<<<<<< HEAD
-payer_account=json.loads(payer_account.text)
-=======
 payer_account=json.loads(payer_account.text)[0]
->>>>>>> origin/master
 payer_account_id=payer_account["_id"]
 
 def transferMoney(borrower): #get borrower as an object of is_borrower
