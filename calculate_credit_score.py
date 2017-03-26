@@ -57,6 +57,4 @@ def getScore():
         stds.append(std)
     return stds
 
-def main():
-    print(getScore())
-main()
+
