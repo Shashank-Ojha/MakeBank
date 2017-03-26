@@ -21,3 +21,5 @@ def sort_borrowers(lender_amount, borrowers):
         sorted_borrowers.append(borrower)
     return sorted_borrowers
 
+def main(lender_amount):
+    sort_borrowers(lender_amount, borrowers):
