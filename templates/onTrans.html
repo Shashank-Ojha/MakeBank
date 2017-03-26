@@ -30,12 +30,12 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="static/semantic/semantic.min.css">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
-    <script src="static/semantic/dist/semantic.min.js"></script>
+    <script src="static/semantic/semantic.min.js"></script>
 
 
 
@@ -95,7 +95,7 @@
                 <a href="/lend" onclick=$("#menu-close").click();>Give a Loan</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Ongoing Transactions</a>
+                <a href="/onTrans" onclick=$("#menu-close").click();>Ongoing Transactions</a>
             </li>
             <li>
                 <a href="#about" onclick=$("#menu-close").click();>Transaction History</a>
@@ -105,65 +105,39 @@
 
     <!-- Header -->
     <header id="top" class="header">
-        <div class="text-vertical-center">
+        <div>
           <div class="container">
 
+          <br>
+          <h1 style="font-size:400%; text-align: center;">Ongoing Transactions</h1>
+          
 
             <div class="row" style="vertical-align:text-top;">
            
 
                 <div class="ui secondary pointing menu">
                       <a class="active item">
-                        Home
+                        Ongoing
                       </a>
                       <a class="item">
-                        Messages
+                        Requests
                       </a>
                       <a class="item">
-                        Friends
+                        Completed
                       </a>
-                      <div class="right menu">
-                        <a class="ui item">
-                          Logout
-                        </a>
-                      </div>
                     </div>
                     <div class="ui segment">
-                      <p></p>
+                      <img class="ui avatar circular image" style="width:40px; height:40px; align-content:left;" src="static/img/Riya.png" >
+                      Riyanna Uttapam   
+                    <!-- </div>
+                    <div class="pull-right"> -->
+                      <!-- <a  href="/contacted" class="btn btn-dark btn-lg pull-right">Contact</a>
+                      <img style="width:100px" src = "static/img/whitespace.png"> -->
+                      <a href="/contacted" class="btn btn-dark btn-lg pull-right">Transfer</a>
                     </div>
 
 
 
-                <h1 style="font-size:400%;">Ongoing Transactions</h1>
-                <h2 style="font-size:200%">Let us match you with your ideal candidate!</h2>
-                <br>
-                <br>
-            </div>
-            <form action="/lend" method="POST">
-            <div class = "row">
-                <div class = "col-sm-1">
-                </div>
-                <div class = "col-sm-4">
-                      <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
-                        <input type="text" class="form-control" id="usr" name="loanVal" placeholder="$">
-
-
-                      </div>
-                </div>
-                <div class = "col-sm-2">
-                </div>
-                <div class = "col-sm-4">
-                      <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
-                        <label style = "font:100%"><input type="radio" class="form-inline" name="IRrange" value="0.5"> 0% - 1%</label><br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="1.5"> 1% - 2%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="2.5"> 2% - 3%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="3.5"> >3%</label>
-                      </div>
-                </div>
-                <div class = "col-sm-1">
-                </div>
             </div>
 
             <!-- <div class = "row">
@@ -177,8 +151,7 @@
                 </div>
             </div> -->
             <br>
-            <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Find me a Borrower!" href="/lenderSearch">
-          </form>
+            <!-- <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Find me a Borrower!" href="/lenderSearch"> -->
             <div class = "row">
             <br>
             <br>

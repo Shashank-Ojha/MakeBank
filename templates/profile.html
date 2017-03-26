@@ -30,12 +30,12 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="static/semantic/semantic.min.css">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"></script>
-    <script src="static/semantic/dist/semantic.min.js"></script>
+    <script src="static/semantic/semantic.min.js"></script>
 
 
 
@@ -95,7 +95,7 @@
                 <a href="/lend" onclick=$("#menu-close").click();>Give a Loan</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Ongoing Transactions</a>
+                <a href="/onTrans" onclick=$("#menu-close").click();>Ongoing Transactions</a>
             </li>
             <li>
                 <a href="#about" onclick=$("#menu-close").click();>Transaction History</a>
@@ -107,42 +107,36 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
           <div class="container">
-
-
-            <div class="row" style="vertical-align:text-top;">
-                <img class="ui medium circular image" src="static/img/Dikky.jpg">
-
-                <h1 style="font-size:400%;">What type of borrower are you looking for?</h1>
-                <h2 style="font-size:200%">Let us match you with your ideal candidate!</h2>
-                <br>
+            <div class="row">
+                
+                    <h1 style="font-size:400%;">My Profile</h1>
                 <br>
             </div>
-            <form action="/lend" method="POST">
-            <div class = "row">
-                <div class = "col-sm-1">
+            <div class="row">
+                
+                <div class="col-sm-6">
+                <img class="ui large circular image" src="static/img/Dikky.jpg">
                 </div>
-                <div class = "col-sm-4">
-                      <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
-                        <input type="text" class="form-control" id="usr" name="loanVal" placeholder="$">
+                <div class="col-sm-6">
+                    <h2 style="font-size:200%; display: inline; "> <i>Name: </i></h2>
+                    <span style = "font-size:200%"> Lender Lenny</span>
+
+                    <br>
+
+                    <h2 style="font-size:200%; display: inline; "> <i>Account Number: </i></h2>
+                    <span style = "font-size:200%"> 123456789</span>
+                </div>
+                <br>
+                <br>
+                <input class="btn btn-dark btn-lg" value="Update">
 
 
-                      </div>
-                </div>
-                <div class = "col-sm-2">
-                </div>
-                <div class = "col-sm-4">
-                      <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
-                        <label style = "font:100%"><input type="radio" class="form-inline" name="IRrange" value="0.5"> 0% - 1%</label><br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="1.5"> 1% - 2%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="2.5"> 2% - 3%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="3.5"> >3%</label>
-                      </div>
-                </div>
-                <div class = "col-sm-1">
-                </div>
+                
+
+                
             </div>
+            
+            
 
             <!-- <div class = "row">
                 <div class = "col-sm-3">
@@ -155,15 +149,13 @@
                 </div>
             </div> -->
             <br>
-            <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Find me a Borrower!" href="/lenderSearch">
-          </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <div class = "row">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            
             </div>
           </div>
         </div>
