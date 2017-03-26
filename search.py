@@ -4,8 +4,7 @@ from is_borrower import *
 
 #focus on lender
 #search by only amount, not interest rate
-borrowers=main(200, 2)
-print (borrowers)
+
 def sort_borrowers(lender_amount, borrowers):
     #borrowers of type Borrower
     #want a lower match score
@@ -21,5 +20,5 @@ def sort_borrowers(lender_amount, borrowers):
         sorted_borrowers.append(borrower)
     return sorted_borrowers
 
-def main(lender_amount):
-    sort_borrowers(lender_amount, borrowers):
+def get_borrowers(lender_amount):
+    return sort_borrowers(lender_amount, borrowers):
