@@ -63,6 +63,6 @@ def main():
     Rihanna=make_borrower(rihanna_borrow_amount, rihanna_interest_rate, "Rihanna")
     elle_borrow_amount=800
     elle_interest_rate=5
-    Elle=make_borrower(teg_borrow_amount, teg_interest_rate, "Elle")
+    Elle=make_borrower(elle_borrow_amount, elle_interest_rate, "Elle")
     borrowers=[Adam, Billy, Carlisle, Sasha, Rihanna, Elle] #all of type Borrowes
     return borrowers
