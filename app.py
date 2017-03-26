@@ -3,6 +3,8 @@ from flask import Flask, render_template, request
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
 import search
 import send_messages
+from transfer import *
+from pickle import dump, load
 
 
 # create the application object
@@ -32,6 +34,10 @@ def chooseBorrow():
         amount = int(request.form['loanVal'])
         rate = float(request.form['IRrange'])
         database = search.get_borrowers(amount, rate)
+        fout = open( 'database.pkl' , 'wb' )
+        dump( database , fout , protocol = 2 )
+        fout.close()
+
         #this will give you a list of burrowers
         return render_template("lenderSearch.html",
                                 name1 = database[0].name,
@@ -59,14 +65,6 @@ def borrow():
 def borrowPosted():
     return render_template('borrowPosted.html')
 
-@app.route('/profile')
-def profile():
-    return render_template('profile.html')
-
-@app.route('/onTrans')
-def onTrans():
-    return render_template('onTrans.html')
-
 @app.route('/borrow', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
@@ -75,12 +73,25 @@ def chooseLender():
         #filename.main(amount, rate)
         return render_template("lenderSearch.html", amount = amount, rate = rate)
 
-@app.route('/contacted')
+@app.route('/contact', methods = ['POST'])
 def contact():
-    body = "Hi, Hardik has requested to get in contact with you for your requested loan amount on MakeBank."
-    phone = "+16309080289"
-    send_messages.send_message(body, phone)
-    return render_template('contact.html')
+    if request.method == 'POST':
+        body = "Hi, Hardik has requested to get in contact with you for your requested loan amount on MakeBank."
+        phone = "+16309080289"
+        send_messages.send_message(body, phone)
+        transferIndex = str(request.form['person'])
+        with open("client.txt", "wt") as f:
+            f.write(transferIndex)
+        return render_template('contact.html')
+
+@app.route('/transfer')
+def transferFromLender():
+    database = load( open( 'database.pkl' , 'rb' ) )
+    with open("client.txt", "rt") as f:
+        transferIndex =  int(f.read())
+    moneyLeft = transferMoney(database[transferIndex])
+    print (moneyLeft)
+    return render_template('transfer.html')
 
 
 

@@ -34,7 +34,7 @@
 
 
 
-    
+
     <link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.min.css">
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -147,7 +147,13 @@
                     </ul>
                     <br>
                     <br>
-                    <a href="/contacted" class="btn btn-dark btn-lg">Contact</a>
+                    <form action="/contact" method="POST">
+                    <input type="hidden" class="form-control" name="person" value="1">
+                    <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Contact" href="/contact">
+                    </form>
+
+
+                    <!-- <a href="/contacted" class="btn btn-dark btn-lg">Contact</a> -->
                   </div>
                 </div>
             </div>
@@ -175,7 +181,10 @@
                     </ul>
                     <br>
                     <br>
-                    <a href="/contacted" class="btn btn-dark btn-lg">Contact</a>
+                    <form action="/contact" method="POST">
+                    <input type="hidden" class="form-control" name="person" value="2">
+                    <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Contact" href="/contact">
+                    </form>
                   </div>
                 </div>
             </div>
@@ -203,7 +212,10 @@
                     </ul>
                     <br>
                     <br>
-                    <a href="/contacted" class="btn btn-dark btn-lg">Contact</a>
+                    <form action="/contact" method="POST">
+                    <input type="hidden" class="form-control" name="person" value="3">
+                    <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Contact" href="/contact">
+                    </form>
                   </div>
                 </div>
 
