@@ -7,33 +7,33 @@ import random
 
 # teg_api="dcd6272d8dab8b826b5c1376ac90af1b"
 #this is the lender's customer_id
-customer_id="58d7ab4d1756fc834d909bd2"
+customer_id="58d7c3211756fc834d909caa"
 customer_url="http://api.reimaginebanking.com/customers/{}/accounts?key=dcd6272d8dab8b826b5c1376ac90af1b".format(customer_id)
 new_customer= {
-  "first_name": "Lender",
-  "last_name": "Lenny",
+  "first_name": "Elle",
+  "last_name": "Teg",
   "address": {
-    "street_number": "777",
-    "street_name": "Money Road",
-    "city": "Cash",
-    "state": "MO",
-    "zip": "77777"
+    "street_number": "888",
+    "street_name": "Green Road",
+    "city": "Mexico City",
+    "state": "MX",
+    "zip": "88888"
   }
 }
 account={
   "type": "Credit Card",
-  "nickname": "Lender",
+  "nickname": "Elle",
   "rewards": 0,
-  "balance": 50000,
-  "account_number": "7777777777777777"
+  "balance": 40000,
+  "account_number": "8888888888888888"
 }
 
-# response=requests.post(
-#   customer_url,
-#   data=json.dumps(account),
-#   headers={'content-type':'application/json'}
-#   )
-# print(response.status_code)
+response=requests.post(
+  customer_url,
+  data=json.dumps(account),
+  headers={'content-type':'application/json'}
+  )
+print(response.status_code)
 # #new merchant
 # url="http://api.reimaginebanking.com/merchants?key=3f5b7bf5eab502003796c17aa8e134e4"
 # store={
