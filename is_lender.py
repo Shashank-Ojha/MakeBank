@@ -20,7 +20,7 @@ class Lender(object):
         self.account_balance=get_account_balance(customer)
 
 
-#hardcoded for now to make a borrower named adam, who is already stored in captial 1 database
+#hardcoded for now to make a borrower named lender, who is already stored in captial 1 database
 def make_lender(lend_amount, lend_interest_rate, name):
     customers_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
     customers=requests.get(customers_url)
@@ -34,8 +34,8 @@ def make_lender(lend_amount, lend_interest_rate, name):
     Customer=Lender(name, borrow_amount, borrow_interest_rate, customer_id)
     return Customer
 
-def main(adam_lend_amount, adam_lend_interest_rate):
-    Lender=make_lender(adam_lend_amount, adam_lend_interest_rate,"Lender")
+def main(lender_lend_amount,lender_lend_interest_rate):
+    Lender=make_lender(lender_lend_amount, lender_lend_interest_rate,"Lender")
     return Lender #do we need to return this?
 
 
