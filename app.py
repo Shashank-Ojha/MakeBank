@@ -2,6 +2,7 @@
 from flask import Flask, render_template, request
 from wtforms import Form, BooleanField, TextField, PasswordField, validators
 import search
+import send_messages
 
 
 # create the application object
@@ -53,13 +54,13 @@ def chooseBorrow():
 def borrow():
     return render_template('borrow.html')
 
-@app.route('/borrow', methods = ['POST'])
-def chooseLender():
-   if request.method == 'POST':
-        amount = request.form['loanVal']
-        rate = request.form['IRrange']
-        #filename.main(amount, rate)
-        return render_template("lenderSearch.html", amount = amount, rate = rate)
+@app.route('/contacted')
+def contact():
+    body = "Hi, Hardik has requested to get in contact with you for your requested loan amount on MakeBank."
+    phone = "+16309080289"
+    send_messages.send_message(body, phone)
+    return render_template('contact.html')
+
 
 
 
