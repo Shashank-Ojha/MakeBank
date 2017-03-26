@@ -6,9 +6,9 @@ AUTH_TOKEN = "b308a23efb875b24021dedfd16b760cf"
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
-message = client.messages.create(
-    body="Hello Monkey!",  # Message body, if any
-    to="+16309080289",
-    from_="+16307565499",
-)
-print (message.sid)
+def send_message(message_body, phone):
+    message = client.messages.create(
+        body=message_body+" You can reach them at 412-961-5899",  # Message body, if any
+        to=phone,
+        from_="+16307565499",
+    )

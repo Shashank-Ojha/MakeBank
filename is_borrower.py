@@ -12,11 +12,11 @@ class Borrower(object):
         customer=json.loads(customer.text)
         self.customer=customer  #capital one dictionary for get customers
         if name=="Sasha":
-            self.credit_score=224.95
+            self.credit_score=224
         if name=="Teg":
-            self.credit_score=131.37
+            self.credit_score=160
         if name=="Rihanna":
-            self.credit_score=112.15
+            self.credit_score=289
         if name=="Adam":
             self.credit_score=getScore()[0]
         if name=="Billy":

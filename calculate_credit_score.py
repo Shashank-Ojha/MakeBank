@@ -53,8 +53,8 @@ def getScore():
         sumOfSquares = 0
         for j in w:
             sumOfSquares += (j-mean)**2
-        std = (sumOfSquares/len(w))**0.5
-        stds.append(std)
+        
+        std = 400-(sumOfSquares/len(w))**0.5
+        stds.append(int(std))
     return stds
-
-
+print(getScore())
