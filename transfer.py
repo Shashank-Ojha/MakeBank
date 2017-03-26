@@ -33,8 +33,8 @@ def make_lender(lend_amount, lend_interest_rate, name):
             customer_id=customer["_id"]
     # if customer_id==None:
         #do something
-    Customer=Lender(name, borrow_amount, borrow_interest_rate, customer_id)
-    return Customer
+    Lender=Lender(name, lend_amount, lend_interest_rate, customer_id)
+    return Lender
 
 
 #payer is the lender, aka lender lenny
