@@ -35,7 +35,7 @@ def transfer(borrower): #get borrower as an object of is_borrower
         headers={'content-type':'application/json'},
         )
     
-        
+    return payer_account["balance"]
 
 
 
