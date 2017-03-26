@@ -13,11 +13,13 @@ def sort_borrowers(lender_amount, borrowers):
         diff=abs(borrower.borrow_amount-lender_amount)
         borrowers_and_match_score[diff]=borrower
     #sort backwards becuase you want lower difference
-    match_scores_sorted=sorted(borrowers_and_match_score.keys())[::-1]
+    match_scores_sorted=sorted(borrowers_and_match_score.keys())
+    print(match_scores_sorted)
     sorted_borrowers=[]
     for match_score in match_scores_sorted:
         borrower=borrowers_and_match_score[match_score]
         sorted_borrowers.append(borrower)
+        print(sorted_borrowers)
     return sorted_borrowers
 
 def get_borrowers(lender_amount, lender_interest_rate):
