@@ -62,6 +62,10 @@
     padding-left: 5%;
     padding-right: 5%;
 }
+.card-title {
+    font-size:200%;
+}
+
 
 }
 </style>
@@ -87,10 +91,16 @@
 
     <!-- Header -->
     <header id="top" class="header">
-      <!-- Left Card -->
-
-
+        <!-- <div class="container"> -->
         <div class="text-vertical-center">
+            <div class="row" style="vertical-align:text-top;">
+                <h1 style="font-size:400%;">Search Results</h1>
+                <h2 style="font-size:200%">Searching for:</h2>
+                <br>
+                <br>
+            </div>
+        
+      <!-- Left Card -->
           <div class="row">
             <div class = "col-sm-4 thinner">
                 <div class="card medium">
@@ -105,7 +115,7 @@
                     <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
                     <br>
-                    <span class="card-title grey-text text-darken-4">Riyanna Uttappam</span>
+                    <ul><span class="card-title grey-text text-darken-4">Riyanna Uttappam</span></ul>
                     <br>
 
 
@@ -129,9 +139,11 @@
 
                   </div>
                   <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Thomas Jefferson High School for Science and Technology<i class="material-icons right">close</i></span>
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
-
+                    <br>
+                    <span class="card-title grey-text text-darken-4">El Teg Singh</span>
+                    <br>
                     <p class="gpa">GPA: 4.37</p>
                     <p class="info">Notable Courses:</p>
                     <ul>
@@ -145,16 +157,19 @@
             <div class = "col-sm-4 thinner">
                 <div class="card medium">
                   <div class="card-image waves-effect waves-block waves-blue">
-                    <img class="activator" src="static/img/riya.png">
+                    <img class="activator" src="static/img/sasha.jpg">
                   </div>
                   <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Class of 2016<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+                    <span class="card-title activator grey-text text-darken-4">Sasha Kerela<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
 
                   </div>
                   <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Thomas Jefferson High School for Science and Technology<i class="material-icons right">close</i></span>
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                     <br>
-
+                    <br>
+                    <span class="card-title grey-text text-darken-4">Sasha Kerela</span>
+                    <br>
+                    
                     <p class="gpa">GPA: 4.37</p>
                     <p class="info">Notable Courses:</p>
                     <ul>
@@ -166,12 +181,15 @@
 
 
           </div>
-          <form method=post action="{{url_for('chooseLender')}}">
+          <!-- <form method=post action="{{url_for('chooseLender')}}">
             <dl>
               {{ amount }}
               {{ rate }}
             </dl>
-          </form>
+          </form> -->
+
+
+
           <!-- <div class="container">
             <h2>Please fill out the following information to best match you to potentional borrowers</h2>
             <form action="/lend" method="POST">
