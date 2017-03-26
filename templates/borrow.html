@@ -74,38 +74,32 @@ h1{
 
 
             <div class="row" style="vertical-align:text-top;">
-                <h1 style="font-size:400%;">What kind of Loan are you looking for?</h1>
-                <br>
+                <h1 style="font-size:400%;">What kind of loan are you looking for?</h1>
+                <h2 style="font-size:200%">Tell us what you need, and we'll do the rest!</h2>
                 <br>
                 <br>
             </div>
-            <form action="/lend" method="POST">
+            <form action="/borrow" method="POST">
             <div class = "row">
-                <div class = "col-sm-1">
-                </div>
-                <div class = "col-sm-4">
-                      <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
-                        <input type="text" class="form-control" id="usr" name="loanVal" placeholder="$">
-
-
-                      </div>
-                </div>
                 <div class = "col-sm-2">
                 </div>
                 <div class = "col-sm-4">
                       <div class="form-group">
-                        <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
-                        <label style = "font:100%"><input type="radio" class="form-inline" name="IRrange" value="0-1%"> 0% - 1%</label><br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="1-2%"> 1% - 2%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value="2-3%"> 2% - 3%</label> <br>
-                        <label><input type="radio" class="form-inline" name="IRrange" value=">3%"> >3%</label>
+                        <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
+                        <label><input type="text" class="form-control" id="usr" name="loanValRequest" placeholder="$"></label>
                       </div>
                 </div>
-                <div class = "col-sm-1">
+                <div class = "col-sm-4">
+                      <div class="form-group">
+                        <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
+                        <label><input type="text" class="form-control" id="usr" name="IRrateRequest" placeholder="%"></label> <br>
+                      </div>
                 </div>
-            </div>
+                <div class = "col-sm-2">
+                </div>
 
+            </div>
+            <br>
             <!-- <div class = "row">
                 <div class = "col-sm-3">
                 <label for="usr" style="font-size:200%;"><i>Other Preferences:</i></label>
