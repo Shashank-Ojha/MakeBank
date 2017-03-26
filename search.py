@@ -21,4 +21,5 @@ def sort_borrowers(lender_amount, borrowers):
     return sorted_borrowers
 
 def get_borrowers(lender_amount, lender_interest_rate):
+    borrowers=main()
     return sort_borrowers(lender_amount, borrowers)[:3]

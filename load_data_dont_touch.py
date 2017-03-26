@@ -8,14 +8,14 @@ import random
 # teg_api="dcd6272d8dab8b826b5c1376ac90af1b"
 customer_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
 new_customer= {
-  "first_name": "Teg",
-  "last_name": "El",
+  "first_name": "Lender",
+  "last_name": "Lenny",
   "address": {
-    "street_number": "666",
-    "street_name": "Rocky Road",
-    "city": "San Antonio",
-    "state": "TX",
-    "zip": "666666"
+    "street_number": "777",
+    "street_name": "Money Road",
+    "city": "Cash",
+    "state": "MO",
+    "zip": "77777"
   }
 }
 

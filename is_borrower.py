@@ -38,7 +38,7 @@ def make_borrower(borrow_amount, borrow_interest_rate, name):
     Customer=Borrower(name, borrow_amount, borrow_interest_rate, customer_id)
     return Customer
 
-def main(adam_borrow_amount, adam_borrow_interest_rate):
+def main():
     adam_borrow_amount=200
     adam_borrow_interest_rate=2
     Adam=make_borrower(adam_borrow_amount, adam_borrow_interest_rate,"Adam")
