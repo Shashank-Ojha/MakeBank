@@ -12,16 +12,16 @@ def sort_borrowers(lender_amount, borrowers):
     borrowers_and_match_score={}
     for borrower in borrowers:
         interest_rate_score=0
-        if lender_amount==0.5 and !(0<=borrower.borrower_interest_rate
+        if lender_amount==0.5 and not(0<=borrower.borrower_interest_rate
         or borrower.borrower_interest_rate<1):
             interest_rate_score=50
-        if lender_amount==1.5 and !(1<=borrower.borrower_interest_rate
+        if lender_amount==1.5 and not(1<=borrower.borrower_interest_rate
         or borrower.borrower_interest_rate<2):
             interest_rate_score=50
-        if lender_amount==2.5 and !(2<=borrower.borrower_interest_rate
+        if lender_amount==2.5 and not(2<=borrower.borrower_interest_rate
         or borrower.borrower_interest_rate<3):
             interest_rate_score=50
-        if lender_amount==3.5 and !(3<=borrower.borrower_interest_rate):
+        if lender_amount==3.5 and not(3<=borrower.borrower_interest_rate):
             interest_rate_score=50
         diff=abs(borrower.borrow_amount-lender_amount)+(400-borrower.credit_score)*.4+interest_rate_score
         borrowers_and_match_score[diff]=borrower
