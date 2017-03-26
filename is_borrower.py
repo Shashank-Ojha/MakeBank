@@ -8,6 +8,13 @@ def get_account_number(customer):
     response=json.loads(response.text)
     response=response[0]
     return response["_id"]
+    
+def get_account_balance(customer):
+    account_url="http://api.reimaginebanking.com/customers/{}/accounts?key=dcd6272d8dab8b826b5c1376ac90af1b".format(customer["_id"])
+    response=requests.get(account_url)
+    response=json.loads(response.text)
+    response=response[0]
+    return response["balance"]
 
 class Borrower(object):
     def __init__(self, name, borrow_amount, borrow_interest_rate, customer_id):
@@ -31,6 +38,7 @@ class Borrower(object):
         if name=="Carlisle":
             self.credit_score=getScore()[2]
         self.account_id=get_account_number(customer)
+        self.account_balance=get_account_balance(customer)
 #hardcoded for now to make a borrower named adam, who is already stored in captial 1 database
 def make_borrower(borrow_amount, borrow_interest_rate, name):
     customers_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
