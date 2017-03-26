@@ -65,6 +65,14 @@ def borrow():
 def borrowPosted():
     return render_template('borrowPosted.html')
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
+
+@app.route('/onTrans')
+def onTrans():
+    return render_template('onTrans.html')
+
 @app.route('/borrow', methods = ['POST'])
 def chooseLender():
    if request.method == 'POST':
