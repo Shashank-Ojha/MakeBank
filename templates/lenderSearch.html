@@ -47,11 +47,24 @@
 
 </head>
 
+<style> 
+.card.medium {
+    
+    color : black;
+    text-align: center;
+    text-decoration: blink;
+}
+
+.text-darken-4 {
+    text-align: center;
+    font-size: 10%;
+}
+</style>
 
 <body>
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -74,23 +87,79 @@
 
         <div class="text-vertical-center">
           <div class="row">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-blue">
-                <img class="activator" src="static/img/callout.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Class of 2016<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+            <div class = "col-sm-4">
+                <div class="card medium">
+                  <div class="card-image waves-effect waves-block waves-blue">
+                    <img class="activator" src="static/img/riya.png">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Riyanna Uttappam<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
 
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Thomas Jefferson High School for Science and Technology<i class="material-icons right">close</i></span>
-                <p class="gpa">GPA: 4.37</p>
-                <p class="info">Notable Courses:</p>
-                <ul>
-                <li>AP Computer Science(5)</li>
-                </ul>
-              </div>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                    <br>
+                    <br>
+                    <span class="card-title grey-text text-darken-4">Riyanna Uttappam</span>
+                    <br>
+                    
+
+                    <p class="gpa">GPA: 4.37</p>
+                    <p class="info">Notable Courses:</p>
+                    <ul>
+                    <li>AP Computer Science(5)</li>
+                    </ul>
+                  </div>
+                </div>
             </div>
+
+
+            <div class = "col-sm-4">
+                <div class="card medium">
+                  <div class="card-image waves-effect waves-block waves-blue">
+                    <img class="activator" src="static/img/teg.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">El Teg Singh<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Thomas Jefferson High School for Science and Technology<i class="material-icons right">close</i></span>
+                    <br>
+
+                    <p class="gpa">GPA: 4.37</p>
+                    <p class="info">Notable Courses:</p>
+                    <ul>
+                    <li>AP Computer Science(5)</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+
+            <div class = "col-sm-4">
+                <div class="card medium">
+                  <div class="card-image waves-effect waves-block waves-blue">
+                    <img class="activator" src="static/img/riya.png">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Class of 2016<i class="material-icons right blue-text" style="font-size: 36px;">keyboard_arrow_up</i></span>
+
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Thomas Jefferson High School for Science and Technology<i class="material-icons right">close</i></span>
+                    <br>
+
+                    <p class="gpa">GPA: 4.37</p>
+                    <p class="info">Notable Courses:</p>
+                    <ul>
+                    <li>AP Computer Science(5)</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+
           </div>
           <form method=post action="{{url_for('chooseLender')}}">
             <dl>
