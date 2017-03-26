@@ -1,8 +1,8 @@
 import requests
 import json
+from calculate_credit_score import *
 
 class Borrower(object):
-    borrowers=[]
     def __init__(self, name, borrow_amount, borrow_interest_rate, customer_id):
         self.name=name
         self.borrow_amount=borrow_amount
@@ -11,7 +11,19 @@ class Borrower(object):
         customer=requests.get(customer_url)
         customer=json.loads(customer.text)
         self.customer=customer  #capital one dictionary for get customers
-
+        if name=="Sasha":
+            self.credit_score=224.95
+        if name=="Teg":
+            self.credit_score=131.37
+        if name=="Rihanna":
+            self.credit_score=112.15
+        if name=="Adam":
+            self.credit_score=get_score()[0]
+        if name=="Billy":
+            self.credit_score=get_score()[1]
+        if name=="Carlisle":
+            self.credit_score=get_score()[2]
+            
 #hardcoded for now to make a borrower named adam, who is already stored in captial 1 database
 def make_borrower(borrow_amount, borrow_interest_rate, name):
     customers_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
@@ -23,11 +35,10 @@ def make_borrower(borrow_amount, borrow_interest_rate, name):
             customer_id=customer["_id"]
     # if customer_id==None:
         #do something
-    Customer=Borrower(name,borrow_amount, interest_rate, customer_id)
+    Customer=Borrower(name, borrow_amount, borrow_interest_rate, customer_id)
     return Customer
 
 def main(adam_borrow_amount, adam_borrow_interest_rate):
-    global borrowers
     Adam=make_borrower(adam_borrow_amount, adam_borrow_interest_rate,"Adam")
     billy_borrow_amount=100
     billy_interest_rate=2
@@ -45,7 +56,7 @@ def main(adam_borrow_amount, adam_borrow_interest_rate):
     teg_interest_rate=5
     Teg=make_borrower(teg_borrow_amount, teg_interest_rate, "Teg")
     borrowers=[Adam, Billy, Carlisle, Sasha, Rihanna, Teg] #all of type Borrowes
-
+    return borrowers
 
 
 

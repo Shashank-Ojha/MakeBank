@@ -6,19 +6,25 @@ import random
 
 
 # teg_api="dcd6272d8dab8b826b5c1376ac90af1b"
-# customer_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
-# new_customer= {
-#   "first_name": "Carlisle",
-#   "last_name": "Capital",
-#   "address": {
-#     "street_number": "333",
-#     "street_name": "Crack Road",
-#     "city": "Chicago",
-#     "state": "CA",
-#     "zip": "33333"
-#   }
-# }
+customer_url="http://api.reimaginebanking.com/customers?key=dcd6272d8dab8b826b5c1376ac90af1b"
+new_customer= {
+  "first_name": "Teg",
+  "last_name": "El",
+  "address": {
+    "street_number": "666",
+    "street_name": "Rocky Road",
+    "city": "San Antonio",
+    "state": "TX",
+    "zip": "666666"
+  }
+}
 
+response=requests.post(
+  customer_url,
+  data=json.dumps(new_customer),
+  headers={'content-type':'application/json'}
+  )
+print(response.status_code)
 # #new merchant
 # url="http://api.reimaginebanking.com/merchants?key=3f5b7bf5eab502003796c17aa8e134e4"
 # store={
@@ -65,25 +71,25 @@ import random
 
 
 #adam
-customer_id="58d6bffc1756fc834d9066a8"
-url="http://api.reimaginebanking.com/accounts/{}/purchases?key=dcd6272d8dab8b826b5c1376ac90af1b".format(customer_id)
+# customer_id="58d6bffc1756fc834d9066a8"
+# url="http://api.reimaginebanking.com/accounts/{}/purchases?key=dcd6272d8dab8b826b5c1376ac90af1b".format(customer_id)
 
-r=requests.get(url)
-re=json.loads(r.text)
-print(re)
-# for entry in re:
-#   ID=entry["_id"]
-#   purchase_url="http://api.reimaginebanking.com/purchases/{}?key=dcd6272d8dab8b826b5c1376ac90af1b".format(ID)
-#   for i in range(1,52,10):
-#     purchase={
-#       "description": "personal"
-#     }
-#     response = requests.put( 
-#       purchase_url, 
-#       data=json.dumps(purchase),
-#       headers={'content-type':'application/json'},
-#       )
-#     print(response.status_code)
+# r=requests.get(url)
+# re=json.loads(r.text)
+# print(re)
+# # for entry in re:
+# #   ID=entry["_id"]
+# #   purchase_url="http://api.reimaginebanking.com/purchases/{}?key=dcd6272d8dab8b826b5c1376ac90af1b".format(ID)
+# #   for i in range(1,52,10):
+# #     purchase={
+# #       "description": "personal"
+# #     }
+# #     response = requests.put( 
+# #       purchase_url, 
+# #       data=json.dumps(purchase),
+# #       headers={'content-type':'application/json'},
+# #       )
+# #     print(response.status_code)
 
 
 # customer_id="58d6bffc1756fc834d9066a8"
@@ -99,4 +105,8 @@ print(re)
 #     headers={'content-type':'application/json'},
 #     )
 #   print(response.status_code)
+
+
+
+
 

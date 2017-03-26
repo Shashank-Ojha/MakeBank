@@ -1,10 +1,11 @@
 import requests
 import json
-from borrowers.py import *
+from is_borrower import *
 
 #focus on lender
 #search by only amount, not interest rate
-
+borrowers=main(200, 2)
+print (borrowers)
 def sort_borrowers(lender_amount, borrowers):
     #borrowers of type Borrower
     #want a lower match score
