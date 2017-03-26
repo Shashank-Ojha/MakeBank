@@ -72,7 +72,9 @@ def borrowPosted():
 
 @app.route('/profile')
 def profile():
-    return render_template('profile.html')
+    with open("moneyLeft.txt", "rt") as f:
+        moneyLeft =  f.read()
+    return render_template('profile.html', moneyLeft = moneyLeft)
 
 @app.route('/onTrans')
 def onTrans():
@@ -105,7 +107,8 @@ def transferFromLender():
         transferIndex =  int(f.read())
     lendInfo = load( open( 'lendInfo.pkl' , 'rb' ) )
     moneyLeft = transferMoney(database[transferIndex], lendInfo[0], lendInfo[1])
-    print (moneyLeft)
+    with open("moneyLeft.txt", "wt") as f:
+        f.write(str(moneyLeft))
     return render_template('transfer.html')
 
 
