@@ -33,6 +33,14 @@
             margin: 35px;
         }
 
+        .ui.avatar.image {
+            size: 40;
+        }
+
+        .btn-dark {
+            border-radius: 10px;
+
+        }
     </style>
 
 </head>
@@ -45,14 +53,31 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Hello Sasha!</a>
+                
+
+
+                <a href="#top" onclick=$("#menu-close").click();>
+                <!-- Hello Lender! -->
+                <img class="ui avatar circular image" style="width:40px; height:40px;" src="static/img/Dikky.jpg">
+                <span>Hello Lender</span>
+                </a>
             </li>
             <li>
-                <a href="#top" onclick=$("#menu-close").click();>Profile</a>
+                <a href="#top" onclick=$("#menu-close").click();>My Profile</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>Pending Transactions</a>
+                <a href="/borrow" onclick=$("#menu-close").click();>Borrow</a>
             </li>
+            <li>
+                <a href="/lend" onclick=$("#menu-close").click();>Give a Loan</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>Ongoing Transactions</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>Transaction History</a>
+            </li>
+
         </ul>
     </nav>
 
@@ -65,8 +90,8 @@
             <table width=200 border="0" align="center" cellpadding="10" cellspacing="0">
                 <tbody>
                     <tr>
-                        <td><a href="/lend" class="btn btn-dark btn-lg">Lend</a></td>
-                        <td><a href="/borrow" class="btn btn-dark btn-lg">Borrow</a></td>
+                        <td><a href="/lend" class="btn btn-dark btn-lg" style="width:90px;">Lend</a></td>
+                        <td><a href="/borrow" class="btn btn-dark btn-lg" style="width:90px">Borrow</a></td>
                     </tr>
                 </tbody>
             </table>
