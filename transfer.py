@@ -34,7 +34,8 @@ def transfer(borrower): #get borrower as an object of is_borrower
         data=json.dumps(transfer_body),
         headers={'content-type':'application/json'},
         )
-    print(response.status_code)
+    if response.status_code==201:
+        
 
 
 
