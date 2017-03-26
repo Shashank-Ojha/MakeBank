@@ -9,7 +9,7 @@ def sort_borrowers(lender_amount, borrowers):
     #borrowers of type Borrower
     #want a lower match score
     borrowers_and_match_score={}
-    for borrower in borrowers:
+    for borrower in borrowers[1:]:
         diff=abs(borrower.borrow_amount-lender_amount)
         borrowers_and_match_score[diff]=borrower
     #sort backwards becuase you want lower difference
