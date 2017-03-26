@@ -47,8 +47,8 @@ def overlayPurchases(l):
 def getScore():
     x = get_purchase_amounts()
     stds = []
-    for i in x:
-        w = overlayPurchases(i) #later change to using overlay
+    for i in x[:-1]:
+        w = overlayPurchases(i)
         mean  = sum(w)/len(w)
         sumOfSquares = 0
         for j in w:
