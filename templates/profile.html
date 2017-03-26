@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MakeBank</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <link rel="stylesheet" type="text/css" href="static/semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="static/semantic/dist/semantic.min.js"></script>
+
+
+
+
+
+</head>
+<style media="screen">
+    h1
+        {
+            margin: 35px;
+        }
+
+    .ui.avatar.image {
+            size: 40;
+        }
+
+    .btn-dark {
+            border-radius: 10px;
+
+        }
+</style>
+
+
+    <style type="text/css">
+        h1
+        {
+            margin: 35px;
+        }
+
+    </style>
+
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$("#menu-close").click();>
+                <!-- Hello Lender! -->
+                <img class="ui avatar circular image" style="width:40px; height:40px;" src="static/img/Dikky.jpg">
+                <span>Hello Lender</span>
+                </a>
+            </li>
+            <li>
+                <a href="/index" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="/profile" onclick=$("#menu-close").click();>My Profile</a>
+            </li>
+            <li>
+                <a href="/borrow" onclick=$("#menu-close").click();>Borrow</a>
+            </li>
+            <li>
+                <a href="/lend" onclick=$("#menu-close").click();>Give a Loan</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>Ongoing Transactions</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$("#menu-close").click();>Transaction History</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+          <div class="container">
+
+
+            <div class="row" style="vertical-align:text-top;">
+                <img class="ui medium circular image" src="static/img/Dikky.jpg">
+
+                <h1 style="font-size:400%;">What type of borrower are you looking for?</h1>
+                <h2 style="font-size:200%">Let us match you with your ideal candidate!</h2>
+                <br>
+                <br>
+            </div>
+            <form action="/lend" method="POST">
+            <div class = "row">
+                <div class = "col-sm-1">
+                </div>
+                <div class = "col-sm-4">
+                      <div class="form-group">
+                        <label for="usr" style="font-size:200%;"><i>Base Loan Value</i></label>
+                        <input type="text" class="form-control" id="usr" name="loanVal" placeholder="$">
+
+
+                      </div>
+                </div>
+                <div class = "col-sm-2">
+                </div>
+                <div class = "col-sm-4">
+                      <div class="form-group">
+                        <label for="usr" style="font-size:200%;"><i>Preferred Interest Rate</i></label> <br>
+                        <label style = "font:100%"><input type="radio" class="form-inline" name="IRrange" value="0.5"> 0% - 1%</label><br>
+                        <label><input type="radio" class="form-inline" name="IRrange" value="1.5"> 1% - 2%</label> <br>
+                        <label><input type="radio" class="form-inline" name="IRrange" value="2.5"> 2% - 3%</label> <br>
+                        <label><input type="radio" class="form-inline" name="IRrange" value="3.5"> >3%</label>
+                      </div>
+                </div>
+                <div class = "col-sm-1">
+                </div>
+            </div>
+
+            <!-- <div class = "row">
+                <div class = "col-sm-3">
+                <label for="usr" style="font-size:200%;"><i>Other Preferences:</i></label>
+                </div>
+                <div class = "col-sm-9">
+                <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+                <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+                </div>
+            </div> -->
+            <br>
+            <input class="btn btn-dark btn-lg" type="submit" name="my-form" value="Find me a Borrower!" href="/lenderSearch">
+          </form>
+            <div class = "row">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
+
+</body>
+
+</html>
