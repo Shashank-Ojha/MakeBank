@@ -31,6 +31,9 @@ def chooseLender():
         rate = request.form['IRrange']
         return render_template("lenderSearch.html", amount = amount, rate = rate)
 
+@app.route('/borrow')
+def borrow():
+    return render_template('borrow.html')
 
 
 # start the server with the 'run()' method
