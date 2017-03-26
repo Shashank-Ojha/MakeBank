@@ -36,6 +36,11 @@ def chooseBorrow():
         database = search.get_borrowers(amount, rate)
         fout = open( 'database.pkl' , 'wb' )
         dump( database , fout , protocol = 2 )
+
+        lendInfo = [amount, rate]
+        fout = open( 'lendInfo.pkl' , 'wb' )
+        dump( lendInfo , fout , protocol = 2 )
+
         fout.close()
 
         #this will give you a list of burrowers
@@ -78,6 +83,7 @@ def chooseLender():
    if request.method == 'POST':
         amount = request.form['loanVal']
         rate = request.form['IRrange']
+
         #filename.main(amount, rate)
         return render_template("lenderSearch.html", amount = amount, rate = rate)
 
@@ -97,7 +103,8 @@ def transferFromLender():
     database = load( open( 'database.pkl' , 'rb' ) )
     with open("client.txt", "rt") as f:
         transferIndex =  int(f.read())
-    moneyLeft = transferMoney(database[transferIndex])
+    lendInfo = load( open( 'lendInfo.pkl' , 'rb' ) )
+    moneyLeft = transferMoney(database[transferIndex], lendInfo[0], lendInfo[1])
     print (moneyLeft)
     return render_template('transfer.html')
 
